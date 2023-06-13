@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active:
+    - dev
+  application:
+    name: discovery-server
+  config:
+    import: optional:configserver:http://pcode.click:8001

@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:vutiendat3601/microservices-config.git
+          ignore-local-ssh-settings: true
+server:
+  port: 8001

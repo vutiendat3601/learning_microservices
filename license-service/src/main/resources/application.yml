@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: license-service
+  profiles:
+    active:
+    - dev
+  config:
+    import: optional:configserver:http://pcode.click:8001
+
+# resilience4j:
+#   bulkhead:
+#     instances:
+#       bulkheadLicenseService:
+#         max-wait-duration: 10ms
+#         max-concurrent-calls: 20
+  
+#   thread-pool-bulkhead:
+#     instances:
+#       bulkheadLicenseService:
+#         max-thread-pool-size: 1
+#         core-thread-pool-size: 1
+#         queue-capacity: 1
+#         keep-alive-duration: 20ms
+#   retry:
+#     instances:
+#       retryLicenseService:
+#         max-attempts: 2
+#         wait-duration: 10000
+#         retry-exceptions:
+#           - java.lang.RuntimeException.RuntimeException
+      
+      

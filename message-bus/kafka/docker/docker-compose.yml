@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  kafka:
+    image: docker.io/bitnami/kafka:3.4
+    ports:
+      - "8201:9092"
+    volumes:
+      - "c:/Users/vutie/workspace/learning/microservices/message-bus/kafka/data:/bitnami"
+    environment:
+      - ALLOW_PLAINTEXT_LISTENER=yes
+

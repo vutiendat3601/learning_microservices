@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active:
+    - dev
+    
+  config:
+    import: optional:configserver:http://pcode.click:8001
